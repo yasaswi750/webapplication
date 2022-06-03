@@ -1,0 +1,12 @@
+function fibo(n){
+  var ret=[1,1];
+  function recurs(n){
+    if(!ret[n-1])recurs(n-1);
+    //if(!ret[n-2])recurs(n-2); // it is not necessary in fact
+    ret[n]=ret[n-1]+ret[n-2];
+  }
+  if(n>2)recurs(n-1);
+  return ret;
+}
+console.log(fibo(2).join());
+console.log(fibo(15).join()
